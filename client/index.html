@@ -8,8 +8,10 @@
 </head>
 <body>
     <h1>A basic Weather app microservice</h1>
-    <p>Press submit to get weather Info for Pittsburgh</p>
+    <p>Enter your details to get weather Info </p>
     <form action="/weather" method="post">
+        <label for="cityInput">City name: </label>
+        <input type="text" name="cityName" placeholder="Enter name of your city" id="cityInput">
         <button type="submit">submit</button>
     </form>
 

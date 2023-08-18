@@ -10,11 +10,12 @@ weatherRoute.post("/", (req, res)=>{
         const city = req.body.cityName
         const appiKey = "495ac44c66104ba9bce62b82b3283064" 
         const unit = "imperial"
-        const lat = 40.4406
-        const lon = -79.9959
         //https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
         //https://api.openweathermap.org/data/3.0/onecall?lat=40.4406&lon=-79.9959&appid=495ac44c66104ba9bce62b82b3283064&units=imperial
-        const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${appiKey}&units=${unit}`
+        //http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=495ac44c66104ba9bce62b82b3283064 
+        //const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${appiKey}&units=${unit}`
+        //undocumented API that allows searching by city, documentation points to the 3.0
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${appiKey}&units=${unit}`
         https.get(url, (response)=>{
             response.on("data", (chunk)=>{
                 //const responseData = JSON.parse(chunk);
