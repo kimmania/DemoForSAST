@@ -1,0 +1,44 @@
+{
+    "coord": {
+        "lon": -79.9959,
+        "lat": 40.4406
+    },
+    "weather": [
+        {
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 73.58,
+        "feels_like": 73.18,
+        "temp_min": 70.56,
+        "temp_max": 76.28,
+        "pressure": 1014,
+        "humidity": 54
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 12.66,
+        "deg": 280,
+        "gust": 26.46
+    },
+    "clouds": {
+        "all": 40
+    },
+    "dt": 1692390607,
+    "sys": {
+        "type": 2,
+        "id": 2008038,
+        "country": "US",
+        "sunrise": 1692354816,
+        "sunset": 1692404069
+    },
+    "timezone": -14400,
+    "id": 5206379,
+    "name": "Pittsburgh",
+    "cod": 200
+}
