@@ -1,5 +1,8 @@
-const divideNumbers = (numerator, denominator) => {
-    return numerator / 0;
+const fetchData = () => {
+   setTimeout(() => {
+        const data = Math.random();
+        return data; //Incorrect handling of asynchronous callback
+   }, 1000);
 };
 
-module.exports = divideNumbers;
+module.exports = fetchData;
