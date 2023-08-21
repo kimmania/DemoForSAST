@@ -1,8 +1,9 @@
-const fetchData = () => {
-   setTimeout(() => {
-        const data = Math.random();
-        return data; //Incorrect handling of asynchronous callback
-   }, 1000);
+const generateBug = (numerator, denominator) => {
+    const a = numerator; 
+    const b = denominator;
+
+    a = b;
+    return a / b;
 };
 
-module.exports = fetchData;
+module.exports = generateBug;
