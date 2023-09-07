@@ -3,6 +3,7 @@ const bodyParser = require("body-parser")
 
 const aboutRouter = require("./routes/about");
 const weatherRouter = require("./routes/weather");
+const badRouter = require('./routes/badRoute');
 
 const PORT = 3000;
 const HOST_NAME = "localhost";
@@ -13,6 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use("/weather", weatherRouter);
 app.use("/about", aboutRouter);
+app.use("/bad", badRouter);
 
 
 app.listen(PORT, HOST_NAME, ()=>{

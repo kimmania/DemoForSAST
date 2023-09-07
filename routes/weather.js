@@ -25,7 +25,7 @@ weatherRoute.post("/", (req, res) => {
         response.on("end", () => {
             try {
                 let json = JSON.parse(JSON.stringify(body));
-                // const temperature = 78;//json.main.temp;
+                const temperature = json.main.temp;
                 // const weatherDes = "test";//json.weather[0].description;
                 // const icon = json.weather[0].icon;
                 // const cityName = json.name;
