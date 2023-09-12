@@ -9,12 +9,8 @@ weatherRoute.get("/", (req, res) => {
 weatherRoute.post("/", (req, res) => {
     const city = req.body.cityName
     const unit = "imperial"
-    //https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
-    //https://api.openweathermap.org/data/3.0/onecall?lat=40.4406&lon=-79.9959&appid=495ac44c66104ba9bce62b82b3283064&units=imperial
-    //http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=495ac44c66104ba9bce62b82b3283064 
-    //const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${appiKey}&units=${unit}`
     //undocumented API that allows searching by city, documentation points to the 3.0
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=495ac44c66104ba9bce62b82b3283064&units=${unit}`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${fillin}&units=${unit}`
     https.get(url, (response) => {
         let body = "";
 
