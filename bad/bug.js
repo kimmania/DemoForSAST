@@ -3,6 +3,7 @@ const generateBug = (numerator, denominator) => {
     const b = denominator;
 
     a = b;
+    b = 1;
     return a / b;
 };
 
